@@ -21,5 +21,10 @@
     line-height: 33px;
     letter-spacing: 0%;
     text-align: left;
+    white-space: pre-wrap;
+
+    & sup {
+      line-height: 10px;
+    }
   }
 }

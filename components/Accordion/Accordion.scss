@@ -26,12 +26,19 @@
       line-height: 33px;
       letter-spacing: 0%;
       text-align: left;
+      & sup {
+        line-height: 10px;
+      }
       & b {
         font-weight: 700;
       }
       &:first-child {
         margin: 0;
       }
+    }
+
+    & img {
+      max-width: 1211px;
     }
 
     & h3 {
@@ -42,12 +49,14 @@
       line-height: 41px;
       letter-spacing: 0%;
       text-align: center;
+      margin-left: -8px;
     }
 
     & .container {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      // justify-content: space-between;
+      gap: 55px;
 
     }
 
@@ -57,6 +66,8 @@
       align-items: center;
       border-radius: 20px;
       padding: 30px 0;
+      max-width: 367px;
+      width: 100%;
 gap: 15px;
       background: rgba(253, 217, 102, 0.25);
       & svg {
@@ -70,6 +81,7 @@ gap: 15px;
         line-height: 131px;
         letter-spacing: 0%;
         text-align: center;
+        margin-top: 2px;
       }
       & p {
         color: $textBlueColor;
@@ -80,6 +92,11 @@ gap: 15px;
         letter-spacing: 0%;
         text-align: center;
         max-width: 347px;
+        margin-top: -20px;
+        & sup {
+          font-size: 15px;
+          margin-top: -3px;
+        }
         & b {
           font-weight: 700;
         }
@@ -104,8 +121,8 @@ gap: 15px;
     background: $GradientYG;
     padding: 18px;
     & svg {
-      width: 100%;
-      height: 100%;
+      width: 96%;
+      height: 96%;
     }
   }
   &__name {
@@ -145,7 +162,8 @@ gap: 15px;
     letter-spacing: 0%;
     text-align: left;
     position: relative;
-    background: linear-gradient(180deg, $textBlueColor 60%, transparent 110%);
+    white-space: pre-wrap;
+    background: linear-gradient(180deg, $textBlueColor 50%, transparent 95%);
     -webkit-background-clip: text;
     color: transparent;
   }

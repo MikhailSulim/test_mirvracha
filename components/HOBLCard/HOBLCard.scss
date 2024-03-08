@@ -65,5 +65,8 @@
     line-height: 33px;
     letter-spacing: 0%;
     text-align: center;
+    & sup {
+        line-height: 10px;
+    } 
   }
 }
