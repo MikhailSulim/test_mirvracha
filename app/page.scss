@@ -3,7 +3,7 @@
 .main {
   position: relative;
   display: flex;
-  padding-top: 140px;
+  padding: 140px 30px 0;
 }
 
 .content {
@@ -51,36 +51,197 @@
   margin-bottom: 50px;
 }
 
-.cards-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    &_arrow {
-        justify-content: center;
-        gap: 30px;
-        margin-bottom: 44px;
-        & div {
-            max-width: 425px;
-            width: 100%;
-            max-height: 37px;
-            border: 2px solid $textBlueColor;
-            border-top: none;
-            display: flex;
-            justify-content: center;
-            & svg {
-                width: 30px;
-                height: 25px;
-                margin-top: 35px;
+.cards {
+  display: flex;
+  flex-direction: column;
+}
 
-            }
-        }
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &_arrow {
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 44px;
+    & div {
+      max-width: 425px;
+      width: 100%;
+      max-height: 37px;
+      border: 2px solid $textBlueColor;
+      border-top: none;
+      display: flex;
+      justify-content: center;
+      & svg {
+        width: 30px;
+        height: 25px;
+        margin-top: 35px;
+      }
     }
+  }
 }
 
 .accordion-container {
-    padding: 15px 0;
-    display: flex;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+@media screen and (max-width: 1440px) {
+  .main {
+    padding: 110px 30px 0;
+  }
+
+  .content {
+    gap: 60px;
+    padding-bottom: 70px;
+    margin-bottom: 100px;
+  }
+
+  .info {
+    padding: 0 20px;
+    height: 75px;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  .cards-container {
+    &_arrow {
+      padding: 0 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 100px 25px 0;
+  }
+
+  .content {
+    gap: 50px;
+    padding-bottom: 60px;
+    margin-bottom: 90px;
+  }
+
+  .info {
+    padding: 0 15px;
+    height: 75px;
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+
+  .cards-container {
+    &_arrow {
+      padding: 0 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 80px 20px 0;
+  }
+
+  .content {
+    gap: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 70px;
+  }
+
+  .info {
+    padding: 0 15px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+
+  .cards-container {
+    &_arrow {
+      padding: 0 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .main {
+    padding: 50px 10px 0;
+  }
+
+  .content {
+    gap: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+
+  .info {
+    padding: 0 15px;
+    min-height: 70px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+  .cards {
+    gap: 20px;
+  }
+
+  .cards-container {
     flex-direction: column;
-    gap: 38px;
+    align-items: center;
+    gap: 15px;
+    &_arrow {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .main {
+    padding: 30px 10px 0;
+  }
+
+  .content {
+    gap: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  .info {
+    padding: 0 10px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 15px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+  }
 }

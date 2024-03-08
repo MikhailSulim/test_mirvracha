@@ -38,6 +38,8 @@
     }
 
     & img {
+      width: 100%;
+      object-fit: cover;
       max-width: 1211px;
     }
 
@@ -57,7 +59,6 @@
       flex-direction: row;
       // justify-content: space-between;
       gap: 55px;
-
     }
 
     & .accordion-card {
@@ -68,7 +69,7 @@
       padding: 30px 0;
       max-width: 367px;
       width: 100%;
-gap: 15px;
+      gap: 15px;
       background: rgba(253, 217, 102, 0.25);
       & svg {
         max-height: 130px;
@@ -115,7 +116,7 @@ gap: 15px;
   }
 
   &__image {
-    width: 80px;
+    max-width: 80px;
     height: 80px;
     border-radius: 0px 1000px 1000px 1000px;
     background: $GradientYG;
@@ -127,7 +128,7 @@ gap: 15px;
   }
   &__name {
     position: relative;
-    width: 295px;
+    min-width: 295px;
     height: 115px;
     & svg {
       position: absolute;
@@ -166,6 +167,10 @@ gap: 15px;
     background: linear-gradient(180deg, $textBlueColor 50%, transparent 95%);
     -webkit-background-clip: text;
     color: transparent;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__button {
@@ -193,6 +198,348 @@ gap: 15px;
     & svg {
       width: 23.1px;
       height: 26.71px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .accordion {
+    &__expand {
+      & h3 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      & .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      & .accordion-card {
+        & svg {
+          width: 100%;
+        }
+        & h4 {
+          font-size: 70px;
+          line-height: 100px;
+        }
+        & p {
+          hyphens: auto;
+          font-size: 24px;
+          line-height: 32px;
+          padding: 0 15px;
+        }
+        & span {
+          hyphens: auto;
+          padding: 0 15px;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .accordion {
+    gap: 24px;
+    padding: 30px 25px 30px 30px;
+
+    &__expand {
+      gap: 18px;
+      & p {
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      & h3 {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      & .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      & .accordion-card {
+        & svg {
+          max-width: 100px;
+          max-height: 60px;
+        }
+        & h4 {
+          font-size: 50px;
+          line-height: 70px;
+        }
+        & p {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        & span {
+          padding: 0 15px;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    &__image {
+      max-width: 70px;
+      height: 70px;
+
+      padding: 15px;
+    }
+    &__name {
+      min-width: 255px;
+      height: 115px;
+      & svg {
+        width: 100%;
+      }
+
+      & p {
+        top: 17px;
+
+        max-width: 100%;
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+
+    &__text {
+      flex: 1;
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    &__button {
+      right: -10px;
+      width: 40px;
+      height: 40px;
+
+      & svg {
+        width: 70%;
+        height: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .accordion {
+    gap: 20px;
+    padding: 30px 20px 30px 25px;
+
+    &__expand {
+      gap: 15px;
+      & p {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      & h3 {
+        font-size: 22px;
+        line-height: 36px;
+      }
+
+      & .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      & .accordion-card {
+        max-width: 48%;
+        padding: 20px 0;
+        & svg {
+          max-width: 70px;
+          max-height: 40px;
+        }
+        & h4 {
+          font-size: 30px;
+          line-height: 42px;
+        }
+        & p {
+          font-size: 14px;
+          line-height: 18px;
+        }
+        & span {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    &__image {
+      max-width: 50px;
+      height: 50px;
+      padding: 10px;
+    }
+    &__name {
+      min-width: 220px;
+
+      & p {
+        top: 25px;
+
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 20px;
+      -webkit-line-clamp: 5;
+    }
+
+    &__button {
+      top: -10px;
+      right: -10px;
+      width: 30px;
+      height: 30px;
+
+      & svg {
+        width: 70%;
+        height: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .accordion {
+    gap: 15px;
+    padding: 15px;
+
+    &__expand {
+      gap: 15px;
+      & p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      & h3 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      & .accordion-card {
+        padding: 20px 0;
+        gap: 10px;
+        & svg {
+          max-width: 70px;
+          max-height: 40px;
+        }
+        & h4 {
+          font-size: 26px;
+          line-height: 42px;
+        }
+        & p {
+          margin: -5px;
+          font-size: 12px;
+          line-height: 16px;
+          & sup {
+            font-size: 8px;
+          }
+        }
+        & span {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    &__image {
+      display: none;
+    }
+    &__name {
+      min-width: 180px;
+
+      & p {
+        top: 30px;
+
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+      hyphens: auto;
+      -webkit-line-clamp: 6;
+    }
+
+    &__button {
+      top: -10px;
+      right: -10px;
+      width: 30px;
+      height: 30px;
+
+      & svg {
+        width: 70%;
+        height: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .accordion {
+    gap: 5px;
+    padding: 10px;
+    flex-direction: column;
+
+    &__expand {
+      gap: 15px;
+      & p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      & h3 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      & .accordion-card {
+        max-width: 90%;
+      }
+    }
+
+    &__name {
+      margin-top: -20px;
+      min-width: 180px;
+      width: 70%;
+
+      & p {
+        width: 80%;
+        top: 30px;
+
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+      -webkit-line-clamp: 6;
+    }
+
+    &__button {
+      top: -10px;
+      right: -10px;
+      width: 30px;
+      height: 30px;
+
+      & svg {
+        width: 70%;
+        height: 70%;
+      }
     }
   }
 }

@@ -52,7 +52,6 @@
     text-align: center;
 
     & b {
-      color: red;
       font-weight: 700;
     }
   }
@@ -66,7 +65,99 @@
     letter-spacing: 0%;
     text-align: center;
     & sup {
-        line-height: 10px;
-    } 
+      line-height: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .card {
+    max-width: 360px;
+    padding: 20px 0;
+    margin: 0 10px;
+    &__image {
+      max-width: 150px;
+      max-height: 130px;
+    }
+    &__no {
+      max-width: 70px;
+      max-height: 70px;
+      font-size: 40px;
+      line-height: 55px;
+    }
+    & h5 {
+      padding: 0 15px;
+      font-size: 22px;
+      line-height: 30px;
+      hyphens: auto;
+    }
+    & p {
+      padding: 0 15px;
+      hyphens: auto;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    padding: 15px 0;
+    margin: 0 5px;
+    &__image {
+      max-width: 100px;
+      max-height: 130px;
+      & svg {
+        width: 90%;
+        height: 90%;
+      }
+    }
+    &__no {
+      max-width: 50px;
+      max-height: 50px;
+      font-size: 32px;
+      line-height: 40px;
+    }
+    & h5 {
+      padding: 0 15px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+    & p {
+      padding: 0 15px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card {
+    padding: 10px 0;
+    margin: 0;
+    &__image {
+      max-width: 80px;
+      max-height: 100px;
+      & svg {
+        width: 90%;
+        height: 90%;
+      }
+    }
+    &__no {
+      max-width: 40px;
+      max-height: 40px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+    & h5 {
+      padding: 0 15px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    & p {
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }

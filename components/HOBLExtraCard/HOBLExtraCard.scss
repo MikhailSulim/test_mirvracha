@@ -28,3 +28,108 @@
     }
   }
 }
+
+@media screen and (max-width: 1440px) {
+  .extra-card {
+    margin: 0 15px;
+    width: 100%;
+    padding: 30px 0;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    background: $GradientWB;
+
+    & p {
+      padding: 0 15px;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0%;
+      text-align: left;
+      white-space: pre-wrap;
+
+      & sup {
+        line-height: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .extra-card {
+    margin: 0 15px;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 20px;
+    box-shadow: $shadow;
+    background: $GradientWB;
+
+    & p {
+      padding: 0 15px;
+      font-size: 16px;
+      line-height: 22px;
+      hyphens: auto;
+
+      & sup {
+        line-height: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .extra-card {
+    flex-direction: column;
+
+    &::before {
+      font-family: Noto Sans;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22px;
+      padding-left: 15px;
+      padding-bottom: 5px;
+      color: $textBlueColor;
+    }
+
+    &:nth-of-type(1) {
+      &::before {
+        content: '1 и 2 приоритетные направления:';
+      }
+    }
+    &:nth-of-type(2) {
+      &::before {
+        content: '2 и 3 приоритетные направления:';
+      }
+    }
+
+    & p {
+      padding: 0 15px;
+      font-size: 16px;
+      line-height: 22px;
+      hyphens: auto;
+
+      & sup {
+        line-height: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .extra-card {
+    flex-direction: column;
+
+    &::before {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    & p {
+      padding: 0 15px;
+      font-size: 14px;
+      line-height: 18px;
+
+      & sup {
+        font-size: 10px;
+      }
+    }
+  }
+}
