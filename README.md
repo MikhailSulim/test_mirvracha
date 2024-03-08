@@ -11,6 +11,8 @@
 2) Подход к разработке в рамках концепции Pixel Perfect
 
 
+https://www.figma.com/file/IGkKDQmQoxOG3YwG6scXdg/Вариант-тестового-задания?type=design&node-id=0-1&mode=design&t=Ytu7TovmWCLo4hXx-0
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

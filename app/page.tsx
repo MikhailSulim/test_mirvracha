@@ -1,95 +1,72 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client';
 
-export default function Home() {
+import HeaderWaves from '@/components/HeaderWaves/HeaderWaves';
+import './page.scss';
+import Section from '@/components/Section/Section';
+import { HOBLCards, HOBLExtraCards, AccordionCards } from './data';
+import HOBLCard from '@/components/HOBLCard/HOBLCard';
+import HOBLExtraCard from '@/components/HOBLExtraCard/HOBLExtraCard';
+import Accordion from '@/components/Accordion/Accordion';
+import AccordionCardFull1 from '@/components/Accordion/AccordionCardsFull/AccordionCardFull1';
+import AccordionCardFull2 from '@/components/Accordion/AccordionCardsFull/AccordionCardFull2';
+
+export default function Main() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className="main">
+      <HeaderWaves />
+      <div className="content">
+        <Section title="ХОБЛ: мифы и реальность">
+          <div className="accordion-container">
+            <Accordion
+              iconId="user"
+              myth={AccordionCards[0].myth}
+              text={AccordionCards[0].titleText}>
+              <AccordionCardFull1 />
+            </Accordion>
+            <Accordion
+              iconId="chart"
+              myth={AccordionCards[1].myth}
+              text={AccordionCards[1].titleText}
+              second>
+              <AccordionCardFull2 />
+            </Accordion>
+          </div>
+        </Section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+        <Section title="Терапия ХОБЛ: что в фокусе?">
+          <p className="info">
+            Даже 1 среднетяжелое обострение — сигнал к увеличению объема терапии
           </p>
-        </a>
+          <h3 className="subtitle">
+            Приоритетные направления фармакотерапевтической стратегии при ХОБЛ<sup>1</sup>:
+          </h3>
+          <div className="cards">
+            <div className="cards-container">
+              {HOBLCards.map((item) => (
+                <HOBLCard key={item.id} id={item.id} title={item.title} text={item.text} />
+              ))}
+            </div>
+            <div className="cards-container cards-container_arrow">
+              <div>
+                <svg>
+                  <use xlinkHref="/sprite.svg#triangle" />
+                </svg>
+              </div>
+              <div>
+                <svg>
+                  <use xlinkHref="/sprite.svg#triangle" />
+                </svg>
+              </div>
+              
+            </div>
+            <div className="cards-container">
+              {HOBLExtraCards.map((item, idx) => (
+                <HOBLExtraCard key={idx} text={item.text} />
+              ))}
+            </div>
+          </div>
+        </Section>
       </div>
     </main>
-  )
+  );
 }
