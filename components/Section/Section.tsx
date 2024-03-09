@@ -29,8 +29,8 @@ const Section: React.FC<SectionProps> = ({ title, children }) => {
               x2="1346.52"
               y2="55.932"
               gradientUnits="userSpaceOnUse">
-              <stop stop-color="#FBFDFF" />
-              <stop offset="1" stop-color="#D8EFFF" />
+              <stop stopColor="#FBFDFF" />
+              <stop offset="1" stopColor="#D8EFFF" />
             </linearGradient>
           </defs>
         </svg>

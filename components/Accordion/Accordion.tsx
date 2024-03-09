@@ -45,8 +45,8 @@ const Accordion: React.FC<AccordionProps> = ({ myth, iconId, text, children, sec
                   x2="2.95041e-07"
                   y2="50.2293"
                   gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#D8EFFF" />
-                  <stop offset="1" stop-color="white" />
+                  <stop stopColor="#D8EFFF" />
+                  <stop offset="1" stopColor="white" />
                 </linearGradient>
               </defs>
             </svg>
@@ -59,7 +59,7 @@ const Accordion: React.FC<AccordionProps> = ({ myth, iconId, text, children, sec
               <path
                 d="M0 114.5H254.139L295 50.5L254.139 1"
                 stroke="url(#paint0_linear_0_6028)"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <defs>
                 <linearGradient
@@ -69,10 +69,10 @@ const Accordion: React.FC<AccordionProps> = ({ myth, iconId, text, children, sec
                   x2="-10.2769"
                   y2="66.874"
                   gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#01457A" />
-                  <stop offset="0.432292" stop-color="#43A7C7" />
-                  <stop offset="0.744792" stop-color="#BCD77E" />
-                  <stop offset="1" stop-color="#BCD77E" stop-opacity="0" />
+                  <stop stopColor="#01457A" />
+                  <stop offset="0.432292" stopColor="#43A7C7" />
+                  <stop offset="0.744792" stopColor="#BCD77E" />
+                  <stop offset="1" stopColor="#BCD77E" stopOpacity="0" />
                 </linearGradient>
               </defs>
             </svg>

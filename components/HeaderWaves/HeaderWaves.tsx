@@ -30,8 +30,8 @@ const HeaderWaves = () => {
             x2="1649.5"
             y2="14.9412"
             gradientUnits="userSpaceOnUse">
-            <stop offset="0.383678" stop-color="#BCD77E" />
-            <stop offset="0.996656" stop-color="#FDD966" />
+            <stop offset="0.383678" stopColor="#BCD77E" />
+            <stop offset="0.996656" stopColor="#FDD966" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_0_1"
@@ -40,8 +40,8 @@ const HeaderWaves = () => {
             x2="1473.5"
             y2="31.94"
             gradientUnits="userSpaceOnUse">
-            <stop offset="0.550527" stop-color="#FDD966" />
-            <stop offset="1" stop-color="#BCD77E" />
+            <stop offset="0.550527" stopColor="#FDD966" />
+            <stop offset="1" stopColor="#BCD77E" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_0_1"
@@ -50,8 +50,8 @@ const HeaderWaves = () => {
             x2="1254.76"
             y2="33.9456"
             gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FBFDFF" />
-            <stop offset="1" stop-color="#D8EFFF" />
+            <stop stopColor="#FBFDFF" />
+            <stop offset="1" stopColor="#D8EFFF" />
           </linearGradient>
         </defs>
       </svg>

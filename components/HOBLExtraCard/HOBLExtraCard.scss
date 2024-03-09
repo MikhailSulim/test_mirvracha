@@ -15,7 +15,7 @@
   & p {
     max-width: 550px;
     color: $textBlueColor;
-    font-family: Noto Sans;
+    font-family: 'Noto sans', sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 33px;
@@ -80,7 +80,7 @@
     flex-direction: column;
 
     &::before {
-      font-family: Noto Sans;
+      font-family: 'Noto sans', sans-serif;
       font-size: 16px;
       font-weight: 700;
       line-height: 22px;
